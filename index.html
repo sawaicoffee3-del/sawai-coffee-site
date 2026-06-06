@@ -3,237 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>澤井珈琲 ｜ 焙煎したてをお届けする珈琲専門店</title>
+<title>澤井珈琲 ｜ 焼きたてを、今。｜ 珈琲専門店</title>
 <meta name="description" content="澤井珈琲は1982年創業、焙煎にこだわるコーヒー専門店。ご注文後に焙煎する世界一新鮮なコーヒーを、楽天市場・Yahoo!ショッピング・Amazonでお届けします。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#fbfaf7;          /* warm white */
-    --oat:#f2ede4;         /* oatmeal section */
-    --oat-2:#ece5d8;
-    --card:#ffffff;
-    --ink:#3c3a35;         /* warm charcoal */
-    --ink-soft:#8a8275;
-    --sage:#9aa888;        /* muted sage */
-    --sage-deep:#7d8a6c;
-    --beige:#e7ddcb;       /* tag beige */
-    --terra:#cf9b86;       /* dusty terracotta accent */
-    --line:#ece7df;
-    --shadow:0 30px 60px -34px rgba(60,58,53,.4);
-    --shadow-sm:0 18px 40px -26px rgba(60,58,53,.35);
+    --paper:#f4f1ea;       /* warm off-white */
+    --paper-2:#eceadf;
+    --ink:#111110;         /* near black */
+    --ink-2:#3a3a36;
+    --mute:#7c786e;
+    --green:#1f6f4a;       /* editorial accent */
+    --green-2:#25845a;
+    --white:#ffffff;
+    --line:rgba(17,17,16,.16);
+    --line-strong:#111110;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:"Zen Maru Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-weight:700;letter-spacing:.01em}
-  .pop{font-family:"Poppins",sans-serif}
+  body{font-family:"Zen Kaku Gothic New",sans-serif;color:var(--ink);background:var(--paper);line-height:1.85;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  .arc{font-family:"Archivo",sans-serif}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
-  .wrap{max-width:1160px;margin:0 auto;padding:0 26px}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 32px}
   section{position:relative}
+  h1,h2,h3{font-weight:900;letter-spacing:-.01em}
 
-  .label{font-family:"Poppins",sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-deep);font-weight:600}
-  .tag-pill{display:inline-flex;align-items:center;gap:8px;background:var(--beige);color:#7a6f5a;padding:7px 16px;border-radius:30px;font-size:13px;font-family:"Poppins",sans-serif;font-weight:500}
+  .eyebrow{font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--ink)}
+  .num{font-family:"Archivo",sans-serif;font-weight:800;font-style:italic;color:var(--green)}
 
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 30px;border-radius:34px;font-size:15px;font-weight:500;transition:.3s;cursor:pointer;font-family:"Zen Maru Gothic",sans-serif}
-  .btn svg{width:16px;height:16px}
-  .btn-dark{background:var(--ink);color:#fff}
-  .btn-dark:hover{background:#2c2a25;transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(60,58,53,.6)}
-  .btn-line{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
-  .btn-line:hover{border-color:var(--ink);transform:translateY(-2px)}
+  /* arrow link */
+  .alink{display:inline-flex;align-items:center;gap:10px;font-family:"Archivo",sans-serif;font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:5px;transition:.3s}
+  .alink svg{width:16px;height:16px;transition:.3s}
+  .alink:hover{color:var(--green);border-color:var(--green)}
+  .alink:hover svg{transform:translateX(5px)}
+
+  .btn{display:inline-flex;align-items:center;gap:11px;padding:16px 30px;font-family:"Archivo",sans-serif;font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;transition:.3s;cursor:pointer;border-radius:2px}
+  .btn svg{width:16px;height:16px;transition:.3s}
+  .btn-fill{background:var(--ink);color:var(--paper)}
+  .btn-fill:hover{background:var(--green);transform:translateY(-2px)}
+  .btn-fill:hover svg{transform:translateX(4px)}
+  .btn-out{border:2px solid var(--ink);color:var(--ink)}
+  .btn-out:hover{background:var(--ink);color:var(--paper)}
 
   /* ===== Header ===== */
-  header{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:.4s}
-  header.scrolled{background:rgba(251,250,247,.9);backdrop-filter:blur(12px);padding:13px 0;box-shadow:0 1px 0 var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between}
-  .logo{display:flex;align-items:center;gap:12px}
-  .logo .mark{width:44px;height:44px;border-radius:14px;background:var(--ink);display:grid;place-items:center;font-family:"Poppins",sans-serif;font-weight:700;font-size:20px;color:#fff;flex:none}
-  .logo b{font-size:19px;display:block;line-height:1.15}
-  .logo span{font-family:"Poppins",sans-serif;font-size:10px;letter-spacing:.2em;color:var(--ink-soft)}
-  .menu{display:flex;gap:32px;align-items:center}
-  .menu a{font-size:14px;color:var(--ink-soft);transition:.3s;position:relative}
-  .menu a:hover{color:var(--ink)}
-  .menu .nav-cta{background:var(--ink);color:#fff;padding:10px 22px;border-radius:30px}
-  .menu .nav-cta:hover{background:#2c2a25;color:#fff}
-  .burger{display:none;flex-direction:column;gap:6px;cursor:pointer;z-index:110}
-  .burger span{width:26px;height:2px;background:var(--ink);border-radius:2px;transition:.4s}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--paper);border-bottom:1.5px solid var(--line-strong);transition:.3s}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:"Archivo",sans-serif;font-weight:900;font-size:20px;letter-spacing:.02em;display:flex;align-items:center;gap:9px}
+  .logo .dot{width:9px;height:9px;background:var(--green);border-radius:50%;display:inline-block}
+  .menu{display:flex;gap:30px;align-items:center}
+  .menu a{font-family:"Archivo",sans-serif;font-size:13px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);transition:.25s;position:relative}
+  .menu a:hover{color:var(--green)}
+  .menu .nav-cta{background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:2px}
+  .menu .nav-cta:hover{background:var(--green);color:#fff}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:110}
+  .burger span{width:26px;height:2px;background:var(--ink);transition:.4s}
 
   /* ===== Hero ===== */
-  .hero{padding:150px 0 90px}
-  .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
-  .hero-txt .tag-pill{margin-bottom:24px}
-  .hero-txt h1{font-size:clamp(36px,5vw,58px);line-height:1.35;letter-spacing:.01em}
-  .hero-txt h1 .hl{color:var(--sage-deep)}
-  .hero-txt .lead{margin-top:24px;font-size:16px;color:var(--ink-soft);max-width:480px;line-height:2.1}
-  .hero-txt .btns{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
-  .hero-txt .trust{margin-top:32px;display:flex;gap:28px;flex-wrap:wrap}
-  .hero-txt .trust div b{font-family:"Poppins",sans-serif;font-size:24px;display:block;line-height:1}
-  .hero-txt .trust div span{font-size:12px;color:var(--ink-soft)}
-  .hero-img{position:relative}
-  .hero-img .blob{position:absolute;inset:-6% -8% -10% 6%;background:var(--sage);border-radius:46% 54% 58% 42%/52% 44% 56% 48%;z-index:0;opacity:.5}
-  .hero-img .main{position:relative;z-index:1;border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
-  .hero-img .main img{width:100%;aspect-ratio:5/6;object-fit:cover}
-  .hero-img .fcard{position:absolute;z-index:2;background:var(--card);border-radius:18px;box-shadow:var(--shadow-sm);padding:14px 18px;display:flex;align-items:center;gap:12px}
-  .hero-img .fcard.one{bottom:26px;left:-26px}
-  .hero-img .fcard.two{top:26px;right:-22px}
-  .hero-img .fcard .ic{width:42px;height:42px;border-radius:12px;background:var(--oat);display:grid;place-items:center;flex:none}
-  .hero-img .fcard .ic svg{width:22px;height:22px;stroke:var(--sage-deep);fill:none;stroke-width:1.7}
-  .hero-img .fcard b{font-size:14px;display:block;line-height:1.3}
-  .hero-img .fcard small{font-size:11px;color:var(--ink-soft)}
+  .hero{padding-top:64px;border-bottom:1.5px solid var(--line-strong)}
+  .hero-meta{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+  .hero-meta span{font-family:"Archivo",sans-serif;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+  .hero-main{display:grid;grid-template-columns:1.15fr .85fr}
+  .hero-l{padding:54px 56px 48px 0;display:flex;flex-direction:column;justify-content:center;border-right:1.5px solid var(--line-strong)}
+  .hero-l h1{font-size:clamp(54px,8.5vw,128px);line-height:.92;letter-spacing:-.03em}
+  .hero-l h1 .g{color:var(--green)}
+  .hero-l .lead{margin-top:30px;font-size:16px;color:var(--ink-2);max-width:440px;line-height:2}
+  .hero-l .btns{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap}
+  .hero-r{position:relative;overflow:hidden;min-height:480px}
+  .hero-r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero-r .cap{position:absolute;left:0;bottom:0;background:var(--paper);border-top:1.5px solid var(--line-strong);border-right:1.5px solid var(--line-strong);padding:12px 18px;font-family:"Archivo",sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--line-strong)}
+  .hero-stats div{padding:26px 0;text-align:center;border-right:1px solid var(--line)}
+  .hero-stats div:last-child{border-right:none}
+  .hero-stats b{font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(26px,3vw,40px);display:block;line-height:1}
+  .hero-stats span{font-size:12px;color:var(--mute);letter-spacing:.04em}
 
-  /* ===== marquee strip ===== */
-  .strip{background:var(--ink);color:#e9e3d8;padding:16px 0;overflow:hidden;white-space:nowrap}
-  .strip .run{display:inline-block;animation:marq 24s linear infinite;font-family:"Poppins",sans-serif;letter-spacing:.12em;font-size:13px}
-  .strip .run span{margin:0 26px;opacity:.85}
-  .strip .run span b{color:var(--terra)}
+  /* ===== Marquee ===== */
+  .strip{background:var(--ink);color:var(--paper);padding:20px 0;overflow:hidden;white-space:nowrap;border-bottom:1.5px solid var(--ink)}
+  .strip .run{display:inline-block;animation:marq 26s linear infinite;font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,46px);letter-spacing:-.01em;text-transform:uppercase}
+  .strip .run span{margin:0 22px}
+  .strip .run i{color:var(--green-2);font-style:normal}
   @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-  /* ===== Section heading ===== */
-  .sec-head{margin-bottom:48px}
-  .sec-head.center{text-align:center}
-  .sec-head .label{display:block;margin-bottom:12px}
-  .sec-head h2{font-size:clamp(26px,3.6vw,38px)}
-  .sec-head p{margin-top:16px;color:var(--ink-soft);font-size:15px}
+  /* ===== Section head ===== */
+  .shead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:26px;margin-bottom:48px;border-bottom:1.5px solid var(--line-strong)}
+  .shead .l .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .shead .l h2{font-size:clamp(30px,4.6vw,60px);line-height:.98;letter-spacing:-.02em}
+  .shead .r{font-size:14px;color:var(--mute);max-width:300px;text-align:right;padding-bottom:6px}
 
-  /* ===== Features ===== */
-  .features{padding:90px 0}
-  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .feat{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:40px 30px;transition:.4s}
-  .feat:hover{transform:translateY(-8px);box-shadow:var(--shadow-sm)}
-  .feat .ic{width:62px;height:62px;border-radius:18px;background:var(--oat);display:grid;place-items:center;margin-bottom:22px}
-  .feat .ic svg{width:30px;height:30px;stroke:var(--sage-deep);fill:none;stroke-width:1.6}
-  .feat h3{font-size:19px;margin-bottom:12px}
-  .feat p{font-size:14px;color:var(--ink-soft);line-height:1.95}
+  /* ===== Features (editorial rows) ===== */
+  .features{padding:96px 0}
+  .frow{display:grid;grid-template-columns:120px 1fr 1.3fr;gap:30px;align-items:start;padding:40px 0;border-bottom:1px solid var(--line);transition:.3s}
+  .frow:hover{background:var(--paper-2)}
+  .frow:hover .frow-n{color:var(--green)}
+  .frow-n{font-family:"Archivo",sans-serif;font-weight:800;font-size:54px;line-height:.9;color:var(--ink)}
+  .frow h3{font-size:24px;line-height:1.4}
+  .frow p{color:var(--ink-2);font-size:15px;line-height:1.95}
 
-  /* ===== Concept (split) ===== */
-  .concept{padding:90px 0}
-  .concept .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
-  .concept-img{position:relative}
-  .concept-img img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:26px;box-shadow:var(--shadow-sm)}
-  .concept-img .badge{position:absolute;bottom:-20px;right:-16px;background:var(--card);border-radius:18px;box-shadow:var(--shadow-sm);padding:16px 20px;text-align:center}
-  .concept-img .badge b{font-family:"Poppins",sans-serif;font-size:26px;display:block;color:var(--sage-deep);line-height:1}
-  .concept-img .badge span{font-size:11px;color:var(--ink-soft)}
-  .concept-txt h2{font-size:clamp(24px,3.2vw,34px);line-height:1.5;margin-bottom:22px}
-  .concept-txt h2 em{font-style:normal;color:var(--sage-deep)}
-  .concept-txt p{color:var(--ink-soft);font-size:15px;line-height:2.2;margin-bottom:16px}
+  /* ===== Concept ===== */
+  .concept{padding:96px 0;border-top:1.5px solid var(--line-strong)}
+  .concept .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+  .concept-img{overflow:hidden}
+  .concept-img img{width:100%;height:100%;min-height:440px;object-fit:cover}
+  .concept-txt{padding:10px 0 10px 60px;display:flex;flex-direction:column;justify-content:center}
+  .concept-txt .eyebrow{margin-bottom:18px}
+  .concept-txt h2{font-size:clamp(28px,3.6vw,46px);line-height:1.18;letter-spacing:-.02em;margin-bottom:24px}
+  .concept-txt h2 em{font-style:normal;color:var(--green)}
+  .concept-txt p{color:var(--ink-2);font-size:15px;line-height:2.1;margin-bottom:16px}
 
   /* ===== Products ===== */
-  .products{padding:90px 0;background:var(--oat);border-radius:48px;margin:0 14px}
-  .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .card{background:var(--card);border-radius:24px;overflow:hidden;transition:.4s;border:1px solid var(--line)}
-  .card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
-  .card .ph{height:230px;background:#fff;position:relative;overflow:hidden}
-  .card .ph img{width:100%;height:100%;object-fit:contain;padding:12px;transition:.5s}
-  .card:hover .ph img{transform:scale(1.04)}
-  .card .badge{position:absolute;top:14px;left:14px;background:var(--bg);color:var(--ink);font-size:12px;padding:6px 14px;border-radius:30px;border:1px solid var(--line)}
-  .card .body{padding:24px}
-  .card .body .label{font-size:11px}
-  .card .body h3{font-size:19px;margin:8px 0 10px}
-  .card .body p{font-size:13.5px;color:var(--ink-soft);line-height:1.85}
-  .card .body .meta{margin-top:18px;display:flex;align-items:center;justify-content:space-between}
-  .card .body .meta .chip{background:var(--oat);color:var(--sage-deep);font-size:12px;padding:5px 13px;border-radius:30px;font-weight:500}
-  .card .body .meta small{font-size:12px;color:var(--ink-soft)}
+  .products{padding:96px 0;border-top:1.5px solid var(--line-strong)}
+  .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line)}
+  .card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.3s;background:var(--paper)}
+  .card:hover{background:var(--white)}
+  .card .ph{position:relative;background:#fff;aspect-ratio:1/1;overflow:hidden;border-bottom:1px solid var(--line)}
+  .card .ph img{width:100%;height:100%;object-fit:contain;padding:16px;transition:.5s}
+  .card:hover .ph img{transform:scale(1.05)}
+  .card .ph .idx{position:absolute;top:0;left:0;background:var(--ink);color:var(--paper);font-family:"Archivo",sans-serif;font-weight:800;font-size:14px;padding:8px 14px}
+  .card .ph .tag{position:absolute;top:0;right:0;background:var(--green);color:#fff;font-family:"Archivo",sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px}
+  .card .body{padding:26px 24px}
+  .card .body .cat{font-family:"Archivo",sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+  .card .body h3{font-size:23px;margin:8px 0 12px;letter-spacing:-.01em}
+  .card .body p{font-size:14px;color:var(--ink-2);line-height:1.9}
+  .card .body .meta{margin-top:20px;display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--line)}
+  .card .body .meta b{font-family:"Archivo",sans-serif;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  .card .body .meta small{font-size:12px;color:var(--mute)}
 
   /* ===== Stores ===== */
-  .stores{padding:96px 0}
-  .store-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-  .store{border-radius:22px;overflow:hidden;background:var(--card);border:1px solid var(--line);transition:.4s}
-  .store:hover{transform:translateY(-6px);box-shadow:var(--shadow-sm)}
-  .store img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:.5s}
-  .store:hover img{transform:scale(1.06)}
-  .store figcaption{padding:16px;text-align:center}
-  .store figcaption b{font-size:15px;display:block}
-  .store figcaption span{font-size:12px;color:var(--ink-soft)}
+  .stores{padding:96px 0;border-top:1.5px solid var(--line-strong)}
+  .store-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+  .store{background:var(--paper);overflow:hidden}
+  .store .imgwrap{overflow:hidden;aspect-ratio:1/1}
+  .store img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%) contrast(1.05);transition:.5s}
+  .store:hover img{filter:grayscale(0);transform:scale(1.05)}
+  .store figcaption{padding:16px 4px;display:flex;justify-content:space-between;align-items:baseline}
+  .store figcaption b{font-size:15px}
+  .store figcaption span{font-family:"Archivo",sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
 
   /* ===== Shops (EC) ===== */
-  .shops{padding:90px 0;background:var(--oat);border-radius:48px;margin:0 14px}
-  .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .shop{display:block;background:var(--card);border-radius:24px;padding:40px 30px;text-align:center;border:1px solid var(--line);transition:.4s}
-  .shop:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
-  .shop .ico{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;margin:0 auto 18px;font-family:"Poppins",sans-serif;font-weight:700;font-size:26px;color:#fff}
+  .shops{padding:96px 0;border-top:1.5px solid var(--line-strong)}
+  .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .shop{display:block;padding:44px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.3s;position:relative}
+  .shop:hover{background:var(--ink);color:var(--paper)}
+  .shop .ico{font-family:"Archivo",sans-serif;font-weight:900;font-size:30px;width:60px;height:60px;display:grid;place-items:center;color:#fff;margin-bottom:22px}
   .shop.rakuten .ico{background:#bf0000}
   .shop.yahoo .ico{background:#e60033}
   .shop.amazon .ico{background:#2b3a4a}
-  .shop h3{font-size:18px;margin-bottom:10px}
-  .shop p{font-size:13.5px;color:var(--ink-soft);line-height:1.85;margin-bottom:22px}
-  .shop .go{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--ink);padding:11px 24px;border:1.5px solid var(--line);border-radius:30px;transition:.3s}
-  .shop:hover .go{background:var(--ink);color:#fff;border-color:var(--ink);gap:12px}
-  .shop .go svg{width:15px;height:15px}
-  .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-  .ben{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 16px;text-align:center}
-  .ben b{font-family:"Poppins",sans-serif;font-size:22px;display:block;color:var(--ink)}
-  .ben span{font-size:13px;color:var(--ink-soft);margin-top:4px;display:block}
+  .shop:hover .ico{outline:2px solid var(--paper);outline-offset:3px}
+  .shop h3{font-size:21px;margin-bottom:12px}
+  .shop p{font-size:14px;color:var(--ink-2);line-height:1.9;margin-bottom:26px;transition:.3s}
+  .shop:hover p{color:#cfc9bd}
+  .shop .go{display:inline-flex;align-items:center;gap:9px;font-family:"Archivo",sans-serif;font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid currentColor;padding-bottom:4px}
+  .shop .go svg{width:15px;height:15px;transition:.3s}
+  .shop:hover .go svg{transform:translateX(5px)}
+  .benefits{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);margin-top:1px}
+  .ben{padding:30px;border-right:1px solid var(--line);text-align:center}
+  .ben b{font-family:"Archivo",sans-serif;font-weight:800;font-size:30px;display:block;color:var(--green)}
+  .ben span{font-size:13px;color:var(--mute);margin-top:4px;display:block}
 
-  /* ===== Story (soft panel) ===== */
-  .story{padding:96px 0}
-  .story .panel{background:var(--sage);border-radius:36px;padding:72px 50px;text-align:center;color:#fff;position:relative;overflow:hidden}
-  .story .panel::before{content:"";position:absolute;top:-60px;right:-40px;width:200px;height:200px;background:rgba(255,255,255,.12);border-radius:50%}
-  .story .panel::after{content:"";position:absolute;bottom:-70px;left:-30px;width:180px;height:180px;background:rgba(255,255,255,.1);border-radius:50%}
-  .story .panel .label{color:rgba(255,255,255,.85);position:relative}
-  .story .panel h2{font-size:clamp(24px,3.4vw,34px);line-height:1.6;margin:12px 0 0;position:relative}
-  .story .panel p{max-width:600px;margin:22px auto 0;font-size:15px;line-height:2.1;opacity:.92;position:relative}
+  /* ===== Story (dark) ===== */
+  .story{background:var(--ink);color:var(--paper);padding:130px 0;text-align:center}
+  .story .eyebrow{color:var(--green-2);margin-bottom:24px;display:block}
+  .story h2{font-size:clamp(32px,5.6vw,82px);line-height:.98;letter-spacing:-.03em}
+  .story h2 .g{color:var(--green-2)}
+  .story p{max-width:620px;margin:34px auto 0;font-size:15px;line-height:2.1;color:#bdb8ac}
 
   /* ===== Company ===== */
-  .info{padding:96px 0}
-  .info-card{max-width:780px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:14px 44px}
-  .info-card dl{display:grid;grid-template-columns:200px 1fr;border-bottom:1px solid var(--line);padding:20px 4px}
-  .info-card dl:last-child{border-bottom:none}
-  .info-card dt{font-weight:700}
-  .info-card dd{color:var(--ink-soft);font-size:15px}
-  .info-card dd.cert{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-  .info-card dd.cert img{height:60px;width:auto}
+  .info{padding:96px 0;border-top:1.5px solid var(--line-strong)}
+  .info-table{border-top:1px solid var(--line)}
+  .info-table dl{display:grid;grid-template-columns:230px 1fr;border-bottom:1px solid var(--line);padding:22px 4px;transition:.3s}
+  .info-table dl:hover{background:var(--paper-2)}
+  .info-table dt{font-family:"Archivo",sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+  .info-table dd{color:var(--ink-2);font-size:15px}
+  .info-table dd.cert{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .info-table dd.cert img{height:64px;width:auto}
 
   /* ===== CTA ===== */
-  .cta{padding:0 0 100px}
-  .cta .panel{max-width:980px;margin:0 auto;background:var(--ink);color:#fff;border-radius:36px;padding:70px 40px;text-align:center;position:relative;overflow:hidden}
-  .cta .panel::before{content:"";position:absolute;top:-50px;left:-30px;width:170px;height:170px;background:rgba(154,168,136,.4);border-radius:50%}
-  .cta .panel .label{color:var(--sage);position:relative}
-  .cta .panel h2{font-size:clamp(26px,3.6vw,38px);margin:12px 0 14px;position:relative}
-  .cta .panel p{opacity:.85;margin-bottom:32px;position:relative}
-  .cta .panel .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
-  .cta .panel .btn-dark{background:#fff;color:var(--ink)}
-  .cta .panel .btn-dark:hover{background:var(--oat)}
-  .cta .panel .btn-line{color:#fff;border-color:rgba(255,255,255,.4)}
-  .cta .panel .btn-line:hover{border-color:#fff}
+  .cta{padding:110px 0;border-top:1.5px solid var(--line-strong);text-align:center}
+  .cta .eyebrow{color:var(--green);display:block;margin-bottom:20px}
+  .cta h2{font-size:clamp(34px,6vw,92px);line-height:.95;letter-spacing:-.03em}
+  .cta h2 .g{color:var(--green)}
+  .cta p{margin:26px auto 38px;font-size:15px;color:var(--ink-2);max-width:460px}
+  .cta .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
   /* ===== Footer ===== */
-  footer{background:var(--bg);border-top:1px solid var(--line);padding:60px 0 28px}
-  .foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:46px;padding-bottom:40px;border-bottom:1px solid var(--line)}
-  .foot-brand .logo2{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-  .foot-brand .logo2 .mark{width:44px;height:44px;border-radius:14px;background:var(--ink);display:grid;place-items:center;font-family:"Poppins",sans-serif;font-weight:700;font-size:20px;color:#fff}
-  .foot-brand .logo2 b{font-size:18px;display:block}
-  .foot-brand .logo2 span{font-family:"Poppins",sans-serif;font-size:10px;letter-spacing:.2em;color:var(--ink-soft)}
-  .foot-brand p{font-size:13px;color:var(--ink-soft);line-height:1.95;max-width:340px}
-  .foot-brand .addr{margin-top:12px;font-size:12px;color:var(--ink-soft)}
-  .foot-col h4{font-size:13px;margin-bottom:16px;font-family:"Poppins",sans-serif;letter-spacing:.1em}
-  .foot-col a{display:block;font-size:13px;margin-bottom:11px;color:var(--ink-soft);transition:.3s}
-  .foot-col a:hover{color:var(--ink);padding-left:4px}
-  .copy{text-align:center;padding-top:26px;font-size:12px;color:var(--ink-soft);font-family:"Poppins",sans-serif;letter-spacing:.06em}
+  footer{background:var(--ink);color:#bdb8ac;padding:70px 0 30px}
+  .foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:46px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.14)}
+  .foot-brand .logo2{font-family:"Archivo",sans-serif;font-weight:900;font-size:30px;color:var(--paper);display:flex;align-items:center;gap:10px;margin-bottom:18px}
+  .foot-brand .logo2 .dot{width:10px;height:10px;background:var(--green-2);border-radius:50%}
+  .foot-brand p{font-size:13px;line-height:1.95;max-width:340px}
+  .foot-brand .addr{margin-top:12px;font-size:12px;color:#8e887c}
+  .foot-col h4{font-family:"Archivo",sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);margin-bottom:18px}
+  .foot-col a{display:block;font-size:13px;margin-bottom:11px;transition:.25s}
+  .foot-col a:hover{color:var(--green-2);padding-left:5px}
+  .copy{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:28px;font-family:"Archivo",sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8e887c}
 
   /* ===== reveal ===== */
-  .reveal{opacity:0;transform:translateY(34px);transition:.85s cubic-bezier(.2,.7,.2,1)}
+  .reveal{opacity:0;transform:translateY(30px);transition:.8s cubic-bezier(.2,.7,.2,1)}
   .reveal.show{opacity:1;transform:none}
 
   /* ===== Responsive ===== */
-  @media(max-width:880px){
-    .menu{position:fixed;inset:0;background:rgba(251,250,247,.98);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:.5s}
+  @media(max-width:920px){
+    .wrap{padding:0 22px}
+    .menu{position:fixed;inset:0;background:var(--paper);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:.45s;border-left:1.5px solid var(--ink)}
     .menu.open{transform:none}
-    .menu a{font-size:19px;color:var(--ink)}
+    .menu a{font-size:18px}
     .burger{display:flex}
-    .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+    .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .burger.open span:nth-child(2){opacity:0}
-    .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-    .hero{padding:120px 0 70px}
-    .hero .wrap,.concept .wrap{grid-template-columns:1fr;gap:54px}
-    .hero-img{max-width:420px;margin:30px auto 0}
-    .feat-grid,.prod-grid,.shop-grid,.benefits{grid-template-columns:1fr}
+    .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .hero-main{grid-template-columns:1fr}
+    .hero-l{padding:40px 0 40px;border-right:none;border-bottom:1.5px solid var(--line-strong)}
+    .hero-r{min-height:340px}
+    .shead{flex-direction:column;align-items:flex-start;gap:14px}
+    .shead .r{text-align:left}
+    .frow{grid-template-columns:60px 1fr;gap:16px}
+    .frow-n{font-size:36px}
+    .frow p{grid-column:1/-1}
+    .concept .wrap{grid-template-columns:1fr}
+    .concept-img img{min-height:300px}
+    .concept-txt{padding:40px 0 0}
+    .prod-grid,.shop-grid,.benefits{grid-template-columns:1fr}
     .store-grid{grid-template-columns:repeat(2,1fr)}
-    .products,.shops{margin:0 8px;border-radius:34px}
-    .info-card{padding:10px 24px}
-    .info-card dl{grid-template-columns:1fr;gap:6px;padding:16px 4px}
-    .foot-top{grid-template-columns:1fr;gap:32px}
+    .info-table dl{grid-template-columns:1fr;gap:6px;padding:18px 4px}
+    .foot-top{grid-template-columns:1fr;gap:30px}
   }
 </style>
 </head>
@@ -242,16 +237,13 @@
 <!-- Header -->
 <header id="header">
   <div class="wrap nav">
-    <a href="#" class="logo">
-      <span class="mark">S</span>
-      <span><b>澤井珈琲</b><span class="pop">SAWAI COFFEE</span></span>
-    </a>
+    <a href="#" class="logo">SAWAI<span class="dot"></span>COFFEE</a>
     <nav class="menu" id="menu">
       <a href="#features">こだわり</a>
       <a href="#products">商品</a>
       <a href="#stores">店舗</a>
       <a href="#company">会社概要</a>
-      <a href="#shops" class="nav-cta">ご購入はこちら</a>
+      <a href="#shops" class="nav-cta">ご購入</a>
     </nav>
     <div class="burger" id="burger"><span></span><span></span><span></span></div>
   </div>
@@ -260,60 +252,63 @@
 <!-- Hero -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero-txt reveal">
-      <span class="tag-pill">☕ since 1982</span>
-      <h1>毎日に、<br>おいしい一杯を。<br><span class="hl">焼きたての香りを。</span></h1>
-      <p class="lead">ご注文をいただいてから焙煎する、世界一新鮮なコーヒー。1982年創業、鳥取・境港の珈琲専門店です。</p>
-      <div class="btns">
-        <a href="#products" class="btn btn-dark">商品を見る
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#features" class="btn btn-line">こだわりを知る</a>
+    <div class="hero-meta">
+      <span>Specialty Coffee — No.01</span>
+      <span>鳥取・境港 ／ Since 1982</span>
+    </div>
+    <div class="hero-main">
+      <div class="hero-l reveal">
+        <h1>焼きたて<br>を、<span class="g">今。</span></h1>
+        <p class="lead">注文を受けてから焙煎する、世界一新鮮なコーヒー。1982年創業、鳥取・境港の珈琲専門店。封を開けた瞬間の香りを、まっすぐお届けします。</p>
+        <div class="btns">
+          <a href="#products" class="btn btn-fill">商品を見る
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#features" class="btn btn-out">こだわりを知る</a>
+        </div>
       </div>
-      <div class="trust">
-        <div><b class="pop">1982</b><span>創業の専門店</span></div>
-        <div><b class="pop">受注後</b><span>焙煎の鮮度</span></div>
-        <div><b class="pop">3,980円〜</b><span>送料無料</span></div>
+      <div class="hero-r reveal">
+        <img src="https://images.unsplash.com/photo-1442550528053-c431ecb55509?q=80&w=1400&auto=format&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=1400&auto=format&fit=crop'" alt="焙煎したてのコーヒー豆">
+        <span class="cap">Roasted to Order</span>
       </div>
     </div>
-    <div class="hero-img reveal">
-      <span class="blob"></span>
-      <div class="main"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1442550528053-c431ecb55509?q=80&w=1200&auto=format&fit=crop'" alt="淹れたてのコーヒー"></div>
-      <div class="fcard one"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19h16M6 19V9a6 6 0 0 1 12 0v10M9 5V2M15 5V2"/></svg></div><div><b>焙煎したて</b><small>注文後にロースト</small></div></div>
-      <div class="fcard two"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.6.6-4 4 1 5.6L12 19l-5 2.8 1-5.6-4-4 5.6-.6z"/></svg></div><div><b>FSSC22000</b><small>品質認証取得</small></div></div>
+    <div class="hero-stats">
+      <div class="reveal"><b class="arc">1982</b><span>創業の専門店</span></div>
+      <div class="reveal"><b class="arc">受注後</b><span>焙煎の鮮度</span></div>
+      <div class="reveal"><b class="arc">¥3,980〜</b><span>送料無料</span></div>
     </div>
   </div>
 </section>
 
-<!-- Marquee strip -->
+<!-- Marquee -->
 <div class="strip">
-  <div class="run pop"><span>FRESHLY ROASTED <b>•</b></span><span>SINCE 1982 <b>•</b></span><span>WORLD'S FRESHEST COFFEE <b>•</b></span><span>ROASTED TO ORDER <b>•</b></span><span>FRESHLY ROASTED <b>•</b></span><span>SINCE 1982 <b>•</b></span><span>WORLD'S FRESHEST COFFEE <b>•</b></span><span>ROASTED TO ORDER <b>•</b></span></div>
+  <div class="run arc"><span>FRESHLY ROASTED <i>✦</i></span><span>SINCE 1982 <i>✦</i></span><span>WORLD'S FRESHEST <i>✦</i></span><span>ROASTED TO ORDER <i>✦</i></span><span>FRESHLY ROASTED <i>✦</i></span><span>SINCE 1982 <i>✦</i></span><span>WORLD'S FRESHEST <i>✦</i></span><span>ROASTED TO ORDER <i>✦</i></span></div>
 </div>
 
 <!-- Features -->
 <section class="features" id="features">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="label">why sawai</span>
-      <h2>澤井珈琲が選ばれる理由</h2>
-      <p>おいしさには、ちゃんと理由があります。</p>
+    <div class="shead reveal">
+      <div class="l">
+        <span class="eyebrow"><span class="num">✦</span> Why Sawai</span>
+        <h2>選ばれる、<br>3つの理由。</h2>
+      </div>
+      <div class="r">おいしさには、ちゃんと理由があります。生豆から品質管理まで、妥協のない仕事を。</div>
     </div>
-    <div class="feat-grid">
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2C7 7 7 12 12 22C17 12 17 7 12 2Z"/><path d="M12 8v10"/></svg></div>
-        <h3>世界中から厳選した生豆</h3>
-        <p>世界各国の産地から、その年もっとも状態の良い上質な生豆だけを厳選。素材の力を最大限に引き出します。</p>
-      </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19h16M6 19V9a6 6 0 0 1 12 0v10M9 5V2M15 5V2"/></svg></div>
-        <h3>受注後焙煎の鮮度</h3>
-        <p>「世界一新鮮なコーヒー」が信条。ご注文を受けてから一釜ずつ焙煎し、焼きたての香り高い一杯をお届けします。</p>
-      </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.6.6-4 4 1 5.6L12 19l-5 2.8 1-5.6-4-4 5.6-.6z"/></svg></div>
-        <h3>確かな品質管理</h3>
-        <p>国際的な食品安全規格 FSSC22000 を取得。安心してお召し上がりいただける品質を、徹底して守り続けます。</p>
-      </div>
+    <div class="frow reveal">
+      <div class="frow-n arc">01</div>
+      <h3>世界中から厳選した生豆</h3>
+      <p>世界各国の産地から、その年もっとも状態の良い上質な生豆だけを厳選。素材の力を最大限に引き出します。</p>
+    </div>
+    <div class="frow reveal">
+      <div class="frow-n arc">02</div>
+      <h3>受注後焙煎の鮮度</h3>
+      <p>「世界一新鮮なコーヒー」が信条。ご注文を受けてから一釜ずつ焙煎し、焼きたての香り高い一杯をお届けします。</p>
+    </div>
+    <div class="frow reveal">
+      <div class="frow-n arc">03</div>
+      <h3>確かな品質管理</h3>
+      <p>国際的な食品安全規格 FSSC22000 を取得。安心してお召し上がりいただける品質を、徹底して守り続けます。</p>
     </div>
   </div>
 </section>
@@ -321,15 +316,12 @@
 <!-- Concept -->
 <section class="concept" id="concept">
   <div class="wrap">
-    <div class="concept-img reveal">
-      <img src="images/labo.jpg" alt="澤井珈琲の社屋・焙煎ラボ">
-      <div class="badge"><b class="pop">1982</b><span>Since</span></div>
-    </div>
+    <div class="concept-img reveal"><img src="images/labo.jpg" alt="澤井珈琲の社屋・焙煎ラボ"></div>
     <div class="concept-txt reveal">
-      <span class="label">our story</span>
-      <h2 style="margin-top:12px">封を開けた、<br>その<em>香り</em>に。</h2>
+      <span class="eyebrow"><span class="num">✦</span> Our Story</span>
+      <h2>封を開けた、<br>その<em>香り</em>に。</h2>
       <p>澤井珈琲は1982年、鳥取・境港に生まれたコーヒー専門店です。世界中から厳選した上質な生豆を取り揃え、お客様のもとへ届くその瞬間まで、すべての工程に心を込めています。</p>
-      <p>私たちの信条は「世界一新鮮なコーヒー」。だからこそ、ご注文をいただいてから一釜ずつ焙煎し、焼きたてをお届けします。封を開けた瞬間に広がる香りと、澄んだ味わいに感動していただくために。</p>
+      <p>信条は「世界一新鮮なコーヒー」。だからこそ、ご注文をいただいてから一釜ずつ焙煎し、焼きたてをお届けします。封を開けた瞬間に広がる香りと、澄んだ味わいに感動していただくために。</p>
     </div>
   </div>
 </section>
@@ -337,37 +329,39 @@
 <!-- Products -->
 <section class="products" id="products">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="label">our coffee</span>
-      <h2>えらべる、珈琲のたのしみ</h2>
-      <p>シーンに寄り添う、こだわりのラインナップ。</p>
+    <div class="shead reveal">
+      <div class="l">
+        <span class="eyebrow"><span class="num">✦</span> Our Coffee</span>
+        <h2>えらべる、<br>珈琲のたのしみ。</h2>
+      </div>
+      <div class="r">シーンに寄り添う、こだわりのラインナップ。豆・粉・ドリップから選べます。</div>
     </div>
     <div class="prod-grid">
       <div class="card reveal">
-        <div class="ph"><span class="badge">看板ブレンド</span><img src="images/yakumo.jpg" alt="フルーティーやくも"></div>
+        <div class="ph"><span class="idx arc">01</span><span class="tag arc">看板</span><img src="images/yakumo.jpg" alt="フルーティーやくも"></div>
         <div class="body">
-          <span class="label">Signature Blend</span>
+          <span class="cat">Signature Blend</span>
           <h3>やくもブレンド</h3>
           <p>澤井珈琲の名を代表する看板ブレンド。芳醇な香りとまろやかなコクで、毎日飲みたくなる一杯です。</p>
-          <div class="meta"><span class="chip">人気No.1</span><small>豆・粉・ドリップ</small></div>
+          <div class="meta"><b>人気 No.1</b><small>豆・粉・ドリップ</small></div>
         </div>
       </div>
       <div class="card reveal">
-        <div class="ph"><span class="badge">ギフトに</span><img src="images/yumeroman.webp" alt="ブレンド夢・浪漫"></div>
+        <div class="ph"><span class="idx arc">02</span><span class="tag arc">Gift</span><img src="images/yumeroman.webp" alt="ブレンド夢・浪漫"></div>
         <div class="body">
-          <span class="label">Premium Blend</span>
+          <span class="cat">Premium Blend</span>
           <h3>ブレンド夢・浪漫</h3>
           <p>こだわりの豆を贅沢にブレンドした上質な味わい。特別な一杯や贈りものにもふさわしい逸品です。</p>
-          <div class="meta"><span class="chip">ギフト◎</span><small>豆・粉</small></div>
+          <div class="meta"><b>ギフト ◎</b><small>豆・粉</small></div>
         </div>
       </div>
       <div class="card reveal">
-        <div class="ph"><span class="badge">飲み比べ</span><img src="images/drip.jpg" alt="厳選10種 飲み比べ福袋"></div>
+        <div class="ph"><span class="idx arc">03</span><span class="tag arc">Set</span><img src="images/drip.jpg" alt="厳選10種 飲み比べ福袋"></div>
         <div class="body">
-          <span class="label">Variety Set</span>
+          <span class="cat">Variety Set</span>
           <h3>飲み比べ福袋</h3>
           <p>厳選した10種のコーヒーを贅沢に詰め合わせ。日替わりで色々な味わいを愉しめる、人気のセットです。</p>
-          <div class="meta"><span class="chip">お得</span><small>豆・粉</small></div>
+          <div class="meta"><b>お得 セット</b><small>豆・粉</small></div>
         </div>
       </div>
     </div>
@@ -377,16 +371,18 @@
 <!-- Stores -->
 <section class="stores" id="stores">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="label">our stores</span>
-      <h2>澤井珈琲のお店</h2>
-      <p>鳥取・島根から東京まで。焼きたての香りに出会える直営店。</p>
+    <div class="shead reveal">
+      <div class="l">
+        <span class="eyebrow"><span class="num">✦</span> Our Stores</span>
+        <h2>澤井珈琲の、お店。</h2>
+      </div>
+      <div class="r">鳥取・島根から東京まで。焼きたての香りに出会える直営店。</div>
     </div>
     <div class="store-grid">
-      <figure class="store reveal"><img src="images/labo.jpg" alt="本社・焙煎ラボ"><figcaption><b>本社ラボ</b><span>鳥取県境港市</span></figcaption></figure>
-      <figure class="store reveal"><img src="images/honten.jpg" alt="本店"><figcaption><b>本店</b><span>鳥取県境港市</span></figcaption></figure>
-      <figure class="store reveal"><img src="images/ginza.jpg" alt="銀座店"><figcaption><b>銀座店</b><span>東京都中央区</span></figcaption></figure>
-      <figure class="store reveal"><img src="images/solamachi.jpg" alt="東京ソラマチ店"><figcaption><b>東京ソラマチ店</b><span>東京都墨田区</span></figcaption></figure>
+      <figure class="store reveal"><div class="imgwrap"><img src="images/labo.jpg" alt="本社・焙煎ラボ"></div><figcaption><b>本社ラボ</b><span>Tottori</span></figcaption></figure>
+      <figure class="store reveal"><div class="imgwrap"><img src="images/honten.jpg" alt="本店"></div><figcaption><b>本店</b><span>Tottori</span></figcaption></figure>
+      <figure class="store reveal"><div class="imgwrap"><img src="images/ginza.jpg" alt="銀座店"></div><figcaption><b>銀座店</b><span>Tokyo</span></figcaption></figure>
+      <figure class="store reveal"><div class="imgwrap"><img src="images/solamachi.jpg" alt="東京ソラマチ店"></div><figcaption><b>ソラマチ店</b><span>Tokyo</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -394,83 +390,83 @@
 <!-- Shops (EC) -->
 <section class="shops" id="shops">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="label">online store</span>
-      <h2>ご購入はこちらから</h2>
-      <p>各オンラインモールにて好評販売中。ご利用しやすいショップをお選びください。</p>
+    <div class="shead reveal">
+      <div class="l">
+        <span class="eyebrow"><span class="num">✦</span> Online Store</span>
+        <h2>ご購入は、<br>こちらから。</h2>
+      </div>
+      <div class="r">各オンラインモールにて好評販売中。ご利用しやすいショップをお選びください。</div>
     </div>
     <div class="shop-grid">
       <a href="https://www.rakuten.co.jp/sawaicoffee-tea/" target="_blank" rel="noopener" class="shop rakuten reveal">
-        <div class="ico">R</div>
+        <div class="ico arc">R</div>
         <h3>楽天市場店</h3>
         <p>「Beans＆Leaf」楽天市場店。ポイント還元・レビュー多数の人気店です。</p>
-        <span class="go">ショップを見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="go">Visit Store<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
       <a href="https://store.shopping.yahoo.co.jp/sawaicoffee/" target="_blank" rel="noopener" class="shop yahoo reveal">
-        <div class="ico">Y!</div>
+        <div class="ico arc">Y!</div>
         <h3>Yahoo!ショッピング店</h3>
         <p>PayPay残高がおトクに使える。毎日の買い物に便利です。</p>
-        <span class="go">ショップを見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="go">Visit Store<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
       <a href="https://www.amazon.co.jp/s?k=澤井珈琲" target="_blank" rel="noopener" class="shop amazon reveal">
-        <div class="ico">a</div>
+        <div class="ico arc">a</div>
         <h3>Amazon店</h3>
         <p>最短翌日お届け。Prime会員さまにもおすすめです。</p>
-        <span class="go">ショップを見る<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <span class="go">Visit Store<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
     </div>
     <div class="benefits">
-      <div class="ben reveal"><b class="pop">3,980円〜</b><span>(税込)で送料無料</span></div>
-      <div class="ben reveal"><b class="pop">ポイント10倍</b><span>各モールでおトクに</span></div>
-      <div class="ben reveal"><b class="pop">受注後焙煎</b><span>焼きたてを直送</span></div>
+      <div class="ben reveal"><b class="arc">¥3,980〜</b><span>(税込)で送料無料</span></div>
+      <div class="ben reveal"><b class="arc">P 10倍</b><span>各モールでおトクに</span></div>
+      <div class="ben reveal"><b class="arc">受注後焙煎</b><span>焼きたてを直送</span></div>
     </div>
   </div>
 </section>
 
 <!-- Story -->
 <section class="story">
-  <div class="wrap">
-    <div class="panel reveal">
-      <span class="label">a cup of happiness</span>
-      <h2>その一杯に、物語があります。</h2>
-      <p>産地の太陽と雨、農家の手間、焙煎士の眼差し。澤井珈琲の一杯には、たくさんの想いと時間が込められています。コーヒーのある暮らしが、あなたの毎日をそっと豊かにしますように。</p>
-    </div>
+  <div class="wrap reveal">
+    <span class="eyebrow">A Cup of Happiness</span>
+    <h2>その一杯に、<br><span class="g">物語</span>がある。</h2>
+    <p>産地の太陽と雨、農家の手間、焙煎士の眼差し。澤井珈琲の一杯には、たくさんの想いと時間が込められています。コーヒーのある暮らしが、あなたの毎日をそっと豊かにしますように。</p>
   </div>
 </section>
 
 <!-- Company -->
 <section class="info" id="company">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="label">company</span>
-      <h2>会社概要</h2>
+    <div class="shead reveal">
+      <div class="l">
+        <span class="eyebrow"><span class="num">✦</span> Company</span>
+        <h2>会社概要</h2>
+      </div>
     </div>
-    <div class="info-card reveal">
-      <dl><dt>商号</dt><dd>株式会社 澤井珈琲（SAWAI COFFEE）</dd></dl>
-      <dl><dt>創業</dt><dd>1982年</dd></dl>
-      <dl><dt>所在地</dt><dd>鳥取県境港市竹内団地278-6</dd></dl>
-      <dl><dt>代表者</dt><dd>澤井 理憲</dd></dl>
-      <dl><dt>事業内容</dt><dd>コーヒー豆・関連商品の製造および販売</dd></dl>
-      <dl><dt>品質認証</dt><dd class="cert">FSSC22000（食品安全マネジメント規格）取得<img src="images/fssc.png" alt="FSSC22000認証マーク"></dd></dl>
-      <dl><dt>店舗</dt><dd>銀座店・東京ソラマチ店ほか、鳥取・島根県内に展開</dd></dl>
-      <dl><dt>お問い合わせ</dt><dd>0570-050381（平日 10:00〜17:00）</dd></dl>
+    <div class="info-table reveal">
+      <dl><dt>商号 / Name</dt><dd>株式会社 澤井珈琲（SAWAI COFFEE）</dd></dl>
+      <dl><dt>創業 / Est.</dt><dd>1982年</dd></dl>
+      <dl><dt>所在地 / Address</dt><dd>鳥取県境港市竹内団地278-6</dd></dl>
+      <dl><dt>代表者 / CEO</dt><dd>澤井 理憲</dd></dl>
+      <dl><dt>事業内容 / Business</dt><dd>コーヒー豆・関連商品の製造および販売</dd></dl>
+      <dl><dt>認証 / Quality</dt><dd class="cert">FSSC22000（食品安全マネジメント規格）取得<img src="images/fssc.png" alt="FSSC22000認証マーク"></dd></dl>
+      <dl><dt>店舗 / Stores</dt><dd>銀座店・東京ソラマチ店ほか、鳥取・島根県内に展開</dd></dl>
+      <dl><dt>連絡先 / Contact</dt><dd>0570-050381（平日 10:00〜17:00）</dd></dl>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta" id="contact">
-  <div class="wrap">
-    <div class="panel reveal">
-      <span class="label">let's have a coffee</span>
-      <h2>今日のコーヒー、はじめませんか。</h2>
-      <p>香り高い一杯が、あなたの暮らしにそっと寄り添います。</p>
-      <div class="btns">
-        <a href="#shops" class="btn btn-dark">ご購入はこちら
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#features" class="btn btn-line">澤井珈琲について</a>
-      </div>
+  <div class="wrap reveal">
+    <span class="eyebrow">Let's have a coffee</span>
+    <h2>今日の一杯を、<br><span class="g">はじめよう。</span></h2>
+    <p>香り高い一杯が、あなたの暮らしにそっと寄り添います。</p>
+    <div class="btns">
+      <a href="#shops" class="btn btn-fill">ご購入はこちら
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#features" class="btn btn-out">澤井珈琲について</a>
     </div>
   </div>
 </section>
@@ -480,39 +476,34 @@
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <div class="logo2">
-          <span class="mark">S</span>
-          <span><b>澤井珈琲</b><span class="pop">SAWAI COFFEE</span></span>
-        </div>
+        <div class="logo2">SAWAI<span class="dot"></span>COFFEE</div>
         <p>1982年創業、鳥取・境港のコーヒー専門店。ご注文をいただいてから焙煎する「世界一新鮮なコーヒー」を、全国へ世界へお届けします。</p>
         <p class="addr">鳥取県境港市竹内団地278-6 ／ TEL 0570-050381（平日 10:00〜17:00）</p>
       </div>
       <div class="foot-col">
-        <h4>MENU</h4>
+        <h4>Menu</h4>
         <a href="#features">こだわり</a>
         <a href="#products">商品ラインナップ</a>
         <a href="#stores">店舗紹介</a>
         <a href="#company">会社概要</a>
       </div>
       <div class="foot-col">
-        <h4>ONLINE SHOP</h4>
+        <h4>Online Shop</h4>
         <a href="https://www.rakuten.co.jp/sawaicoffee-tea/" target="_blank" rel="noopener">楽天市場店</a>
         <a href="https://store.shopping.yahoo.co.jp/sawaicoffee/" target="_blank" rel="noopener">Yahoo!ショッピング店</a>
         <a href="https://www.amazon.co.jp/s?k=澤井珈琲" target="_blank" rel="noopener">Amazon店</a>
       </div>
     </div>
-    <div class="copy pop">© 2026 SAWAI COFFEE — Thank you for visiting!</div>
+    <div class="copy"><span>© 2026 Sawai Coffee</span><span>Roasted to Order — Since 1982</span></div>
   </div>
 </footer>
 
 <script>
-  const header=document.getElementById('header');
-  window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>50));
   const burger=document.getElementById('burger'),menu=document.getElementById('menu');
   burger.addEventListener('click',()=>{burger.classList.toggle('open');menu.classList.toggle('open')});
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger.classList.remove('open');menu.classList.remove('open')}));
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
-  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.09)+'s';io.observe(el)});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.08)+'s';io.observe(el)});
 </script>
 </body>
 </html>
